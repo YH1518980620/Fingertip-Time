@@ -1,4 +1,4 @@
-package com.example.fingertiptime;
+package com.example.fingertiptime.login;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,6 +16,8 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.example.fingertiptime.R;
 
 public class LoginActivity extends Activity {
 
@@ -44,17 +46,8 @@ public class LoginActivity extends Activity {
 
         // 判断记住密码多选框的状态
         if (sp.getBoolean("ISCHECK", false)) {
-            // 设置默认是记录密码状态
             userName.setText(sp.getString("USER_NAME", ""));
             password.setText(sp.getString("PASSWORD", ""));
-            // 判断自动登陆多选框状态
-            if (sp.getBoolean("AUTO_ISCHECK", false)) {
-                // 跳转界面
-                Intent intent = new Intent(LoginActivity.this,
-                        JumpActivity.class);
-                LoginActivity.this.startActivity(intent);
-                LoginActivity.this.finish();
-            }
         }
 
         // 登录监听事件

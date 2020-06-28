@@ -12,6 +12,9 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.fingertiptime.login.LoginActivity;
+import com.example.fingertiptime.login.RegisterActivity;
+
 public class PersonalFragment extends Fragment {
     int fragment;
     Button loginBtn;
@@ -22,14 +25,15 @@ public class PersonalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         prefs = getContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-        // 判断是否登录
+
         // TODO 与数据库对接
         String loginID = prefs.getString("USER_NAME", "");
         String loginPWD = prefs.getString("PASSWORD", "");
 
-        if (loginID.length() > 0 && loginPWD.length() > 0) { // 已登录
+        // 判断是否登录
+        if (loginID.length() > 0 && loginPWD.length() > 0) {
             fragment = R.layout.fragment_personal;
-        } else { // 未登录
+        } else {
             fragment = R.layout.fragment_visitor;
         }
         View view = inflater.inflate(fragment, container, false);
@@ -59,6 +63,7 @@ public class PersonalFragment extends Fragment {
             logOutBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     // 本地移除用户数据
                     prefs.edit().clear().commit();
 

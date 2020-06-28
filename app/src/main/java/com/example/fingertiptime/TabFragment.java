@@ -34,6 +34,8 @@ public class TabFragment extends Fragment {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
+
+        // TODO 替换成自己的网址
         switch (mTitle) {
             case "推荐":
                 url = "https://baike.baidu.com/";

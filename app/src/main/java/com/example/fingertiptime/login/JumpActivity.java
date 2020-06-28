@@ -1,4 +1,4 @@
-package com.example.fingertiptime;
+package com.example.fingertiptime.login;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ProgressBar;
+
+import com.example.fingertiptime.MainActivity;
+import com.example.fingertiptime.R;
 
 public class JumpActivity extends Activity {
     private ProgressBar progressBar;

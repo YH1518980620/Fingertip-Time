@@ -19,7 +19,6 @@ public class HomeFragment extends Fragment {
     private FragmentAdapter fragmentAdapter;
     private List<TabFragment> fragmentList;
     private TabLayout tabLayout;
-    private TabFragment fragment1, fragment2, fragment3, fragment4, fragment5;
     private List<String> mTitles;
     private String[] title = {"推荐", "新闻", "漫画", "段子", "搜索"};
 
@@ -44,6 +43,6 @@ public class HomeFragment extends Fragment {
 
         fragmentAdapter = new FragmentAdapter(getActivity().getSupportFragmentManager(), fragmentList, mTitles);
         pager.setAdapter(fragmentAdapter);
-        tabLayout.setupWithViewPager(pager);//与ViewPage建立关系
+        tabLayout.setupWithViewPager(pager);
     }
 }

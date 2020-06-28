@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/chatTopBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/chatFriendName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#006400"
+            android:gravity="center"
+            android:text="聊天"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/chatLayoutMsg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#e0e0e0"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/targetUser"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <!--        <Space-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1" />-->
+
+        <EditText
+            android:id="@+id/chatMsgInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/selector_chattext_drawable"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:soundEffectsEnabled="true"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/chatBtnSendMsg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.25"
+            android:text="发送"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
