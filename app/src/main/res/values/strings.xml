@@ -1,12 +1,4 @@
 <resources>
     <string name="app_name">指尖时光</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">用户名</string>
-    <string name="prompt_password">密码</string>
-    <string name="action_sign_in">注册/登入</string>
-    <string name="action_sign_in_short">登入</string>
-    <string name="welcome">"登入成功！"</string>
-    <string name="invalid_username">用户名非法</string>
-    <string name="invalid_password">密码过短</string>
-    <string name="login_failed">"登入失败"</string>
 </resources>
